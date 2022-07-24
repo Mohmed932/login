@@ -1,0 +1,80 @@
+*{
+  padding:0;
+  margin:0;
+}
+.container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8%;
+  box-shadow: 0 4px 16px rgb(43 52 69 / 10%);
+  width: 50vw;
+  padding: 30px;
+}
+.Login{
+  width: 100%;
+  margin-left: 40px;
+}
+.container input{
+  width: 80%;
+  padding: 10px;
+  font-size: 20px;
+}
+.underline{
+  height: 2px;
+  width: 80%;
+  margin:10px 0;
+  background-color: black;
+}
+.title{
+  font-size: 24px;
+}
+.field{
+  margin: 20px 0;
+}
+.Submit{
+  border: none;
+  background-color: blueviolet;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: .5s;
+}
+.Submit:hover{
+  border:1px solid blueviolet;
+  background-color: transparent;
+  color: blueviolet;
+  transform: scale(1.1);
+}
+.required{
+  color: red;
+  display: none;
+}
+.required-Password,.required-UserName,.required-Email,.required-Bind{
+  display: initial;
+}
+@media (max-width:900px) {
+  .container{
+    width: 70vw;
+  }
+}
+@media (max-width:500px) {
+  .container{
+    width: 90vw;
+  }
+  .container input{
+    width: 100%;
+    font-size: 17px;
+  }
+  .underline{
+    width: 100%;
+  }
+  .Login{
+    margin-left: 10px;
+  }
+  .title{
+    font-size: 20px;
+  }
+}
