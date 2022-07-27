@@ -13,13 +13,25 @@ const App = () => {
     e.preventDefault()
     if(UserName.length===0){
       setshowUserName(true)
-    }if(Email.length===0){
+    }else if(UserName.length>0){
+      setshowUserName(false)
+    }
+    if(Email.length===0){
       setshowEmail(true)
-    }if(Password.length===0){ 
+    }else if(Email.length>0){
+      setshowEmail(false)
+    }
+    if(Password.length===0){ 
       setshowPassword(true)
-    }if(Password.length<8){
+    }else if(Password.length>0){
+      setshowPassword(false)
+    }
+    if(Password.length<8){
       setshowBind(true)
-    }if(Password.length===0){
+    }else if(Password.length>8){
+      setshowBind(false)
+    }
+    if(Password.length===0){
       setshowBind(false)
     }
   }
@@ -36,7 +48,7 @@ const App = () => {
            </div>
            <div className='field'>
                <h4 className='title'>Email</h4>
-               <input type='text' placeholder='Email' onChange={(e)=>setEmail(e.target.value)}/>
+               <input type='email' placeholder='Email' onChange={(e)=>setEmail(e.target.value)}/>
                <br/>
                <p className={showEmail?'required required-Email':'required'}> Email is required</p>
            </div>
